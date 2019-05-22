@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-    zzodb:
+    db:
         image: mariadb:latest
         environment:
             - MYSQL_ROOT_PASSWORD=${ZZODB_ROOT_PASSWORD}
@@ -9,9 +9,9 @@ services:
             - MYSQL_USER=${ZZOVLOG_DB_USER}
             - MYSQL_PASSWORD=${ZZOVLOG_DB_PASSWORD}
         volumes:
-            - ./zzodb:/var/lib/mysql
-    zzovlog:
-        build: ./zzovlog
+            - ./db:/var/lib/mysql
+    backend:
+        build: ./backend
         environment:
             - ZZOVLOG_SECRET_KEY
             - ZZOVLOG_DEBUG
@@ -22,9 +22,8 @@ services:
         ports:
             - "8000:80"
         depends_on:
-            - zzodb
-    zzovue:
-        build: ./zzovue
+            - db
+    frontend:
+        build: ./frontend
         ports:
             - "80:8080"
-
