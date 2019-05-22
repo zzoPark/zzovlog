@@ -1,2 +1,11 @@
 # zzovlog
-zzo's devlog
+zzoPark's devlog
+## 실행방법
+필자는 AWS EC2 Ubuntu 프리티어에서 실행함
+```bash
+# Docker 이미지 빌드 및 컨테이너 실행
+docker-compose up -d
+
+# django admin superuser 등록
+docker exec -it zzovlog_backend_1 python3 manage.py createsuperuser
+```
