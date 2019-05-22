@@ -1,5 +1,13 @@
 # zzovlog
 zzoPark's devlog
+## 준비물
+### 환경변수 등록
+```bash
+sudo vi /etc/environment
+source /etc/environment
+export ZZOVLOG_SECRET_KEY
+...
+```
 ## 실행방법
 필자는 AWS EC2 Ubuntu 프리티어 인스턴스에서 실행함
 ```bash
