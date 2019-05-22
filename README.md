@@ -2,11 +2,16 @@
 zzoPark's devlog
 ## 준비물
 ### 환경변수 등록
+다른 방법(.env 파일, .bashrc 파일 그 외 기타등등)을 이용해도 된다
 ```bash
 sudo vi /etc/environment
 source /etc/environment
 export ZZOVLOG_SECRET_KEY
 ...
+```
+잘 등록되었는지 docker-compose.yml 파일이 있는 곳에서 config로 확인
+```bash
+docker-compose config
 ```
 ## 실행방법
 필자는 AWS EC2 Ubuntu 프리티어 인스턴스에서 실행함
