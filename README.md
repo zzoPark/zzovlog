@@ -16,6 +16,8 @@ docker-compose config
 ## 실행방법
 필자는 AWS EC2 Ubuntu 프리티어 인스턴스에서 실행함
 ```bash
+git clone --recursive 
+
 # host에 db container를 위한 data directory 생성
 mkdir db
 
