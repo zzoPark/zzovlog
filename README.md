@@ -16,9 +16,11 @@ docker-compose config
 ## 실행방법
 필자는 AWS EC2 Ubuntu 프리티어 인스턴스에서 실행함
 ```bash
-git clone --recursive 
+# --recursive 옵션으로 submodule(backend, frontend)도 같이 clone함
+git clone --recursive https://github.com/zzoPark/zzovlog.git
 
 # host에 db container를 위한 data directory 생성
+cd zzovlog
 mkdir db
 
 # Docker 이미지 빌드 및 컨테이너 실행
