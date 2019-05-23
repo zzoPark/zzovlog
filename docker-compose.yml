@@ -10,6 +10,7 @@ services:
             - MYSQL_PASSWORD=${ZZOVLOG_DB_PASSWORD}
         volumes:
             - ./db:/var/lib/mysql
+            - ./db.conf.d:/etc/mysql/conf.d
     backend:
         build: ./backend
         environment:
